@@ -53,13 +53,15 @@ Crossref API / Local Snapshot (fallback khi offline)
 
 | Khối | Input | Xử lý chính | Output/artifact | Owner |
 | ----------------- | -------------- | -------------------------- | ------------------------ | -------------- |
-| Ingestion | Crossref API / Local JSON | Fetch, retry 429, parse payload | `data/raw/crossref_records.json` | [Tên 1] |
-| Cleaning | Raw records | Normalize, deduplicate, build text_for_embedding, calculate age_days | `data/clean/papers_clean.json` | [Tên 1] |
-| Embedding/index | Clean DataFrame | MiniLM-L6-v2 embeddings, ChromaDB persist | `data/chroma/`, `data/embeddings/` | [Tên 2] |
-| Evaluation | ChromaDB index, test set | Retrieval hit rate, token F1, judge scoring | `data/results/baseline_metrics.json` | [Tên 2] |
-| Observability | Clean DataFrame | GX quality checks (5 expectations), freshness SLA (180 days) | `data/quality/*.json` | [Tên 2] |
-| Corruption/repair | Clean DataFrame, raw records | 6 corruption scenarios, repair from raw | `data/results/corruption_log.json` | [Tên 3] |
-| Orchestration | Tất cả modules | phase1.py, corruption_flow.py | `data/reports/*.md` | [Tên 3] |
+| Ingestion | Crossref API / Local JSON | Fetch, retry 429, parse payload | `data/raw/crossref_records.json` | Vũ Hải Đăng |
+| Cleaning | Raw records | Normalize, deduplicate, build text_for_embedding, calculate age_days | `data/clean/papers_clean.json` | Vũ Hải Đăng |
+| Embedding/index | Clean DataFrame | MiniLM-L6-v2 embeddings, ChromaDB persist | `data/chroma/`, `data/embeddings/` | Vũ Hải Đăng |
+| Evaluation | ChromaDB index, test set | Retrieval hit rate, token F1, judge scoring | `data/results/baseline_metrics.json` | Vũ Hải Đăng |
+| Observability | Clean DataFrame | GX quality checks (5 expectations), freshness SLA (180 days) | `data/quality/*.json` | Vũ Hải Đăng |
+| Corruption/repair | Clean DataFrame, raw records | 6 corruption scenarios, repair from raw | `data/results/corruption_log.json` | Vũ Hải Đăng |
+| Orchestration | Tất cả modules | phase1.py, corruption_flow.py | `data/reports/*.md` | Vũ Hải Đăng |
+
+*(Nhóm 1 thành viên - Vũ Hải Đăng sở hữu toàn bộ pipeline)*
 
 ## 4. Cách tái hiện kết quả
 
