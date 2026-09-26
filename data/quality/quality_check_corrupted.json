@@ -1,0 +1,43 @@
+{
+  "report_name": "corrupted",
+  "timestamp": "2026-09-26T21:57:19.576155",
+  "results": [
+    {
+      "expectation": "table_row_count",
+      "success": true,
+      "details": {
+        "actual": 22
+      }
+    },
+    {
+      "expectation": "paper_id_not_null",
+      "success": true,
+      "details": {
+        "null_count": 0
+      }
+    },
+    {
+      "expectation": "title_not_null",
+      "success": true,
+      "details": {
+        "null_count": 0
+      }
+    },
+    {
+      "expectation": "paper_id_unique",
+      "success": true,
+      "details": {
+        "unique": 22,
+        "total": 22
+      }
+    },
+    {
+      "expectation": "summary_length",
+      "success": false,
+      "details": {
+        "short_count": 3
+      }
+    }
+  ],
+  "success": false
+}

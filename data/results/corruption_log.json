@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-09-26T21:57:12.386292",
+  "original_rows": 24,
+  "corruptions": [
+    {
+      "type": "drop_latest_records",
+      "description": "Dropped 4 latest records (20%)",
+      "count": 4
+    },
+    {
+      "type": "blank_summary",
+      "description": "Blanked 3 summaries",
+      "count": 3,
+      "indices": [
+        3,
+        11,
+        14
+      ]
+    },
+    {
+      "type": "inject_noise",
+      "description": "Injected noise into 2 summaries",
+      "count": 2,
+      "indices": [
+        9,
+        15
+      ]
+    },
+    {
+      "type": "truncate_title",
+      "description": "Truncated 2 titles to < 5 chars",
+      "count": 2,
+      "indices": [
+        11,
+        15
+      ]
+    },
+    {
+      "type": "stale_date",
+      "description": "Made 3 dates stale (1-2 years back)",
+      "count": 3,
+      "indices": [
+        0,
+        9,
+        1
+      ]
+    },
+    {
+      "type": "duplicate_rows",
+      "description": "Added 2 duplicate rows",
+      "count": 2,
+      "indices": [
+        0,
+        12
+      ]
+    }
+  ],
+  "final_rows": 22,
+  "duplicates": 2
+}
